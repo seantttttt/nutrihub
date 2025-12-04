@@ -32,63 +32,38 @@ import RecipeDetailModal from './components/RecipeDetailModal';
 // --- Hardcoded Data: Sean's Recipes ---
 const SEANS_RECIPES: Recipe[] = [
   {
-    id: 'sean-1',
-    title: "Sean's Power Oatmeal",
-    description: "The ultimate breakfast for sustained energy. High fiber and protein to keep you full.",
-    prepTime: "10 min",
-    servings: "1",
-    calories: 450,
-    goal: "muscle",
-    ingredients: ["1 cup rolled oats", "1 scoop vanilla whey protein", "1 tbsp natural peanut butter", "1/2 banana, sliced", "1 tsp chia seeds", "Dash of cinnamon"],
-    instructions: ["Cook oats with water or milk until fluffy.", "Let cool slightly, then stir in protein powder.", "Top with peanut butter, banana, and seeds."],
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: 'sean-2',
-    title: "Sean's Lean Chicken Stir-fry",
-    description: "Quick, low-calorie, and high-protein. Perfect for cutting without losing flavor.",
-    prepTime: "20 min",
-    servings: "2",
-    calories: 380,
-    goal: "lose",
-    ingredients: ["2 chicken breasts, diced", "2 cups broccoli florets", "1 bell pepper, sliced", "1 tbsp soy sauce", "1 tsp sesame oil", "1 tsp ginger, minced", "1 clove garlic"],
-    instructions: ["Stir-fry chicken in sesame oil until cooked through.", "Remove chicken, add veggies and splash of water to steam.", "Return chicken, add sauce aromatics, and toss for 2 minutes."],
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: 'sean-3',
-    title: "Sean's Classic Beef Bowl",
-    description: "A balanced macro bowl suitable for maintenance. Simple and effective.",
+    id: 'sean-mapo-tofu',
+    title: "Sean's Mapo Tofu",
+    description: "A spicy, protein-packed comfort dish perfect for muscle building. Rich savory sauce with soft tofu.",
     prepTime: "25 min",
-    servings: "1",
-    calories: 550,
-    goal: "maintain",
-    ingredients: ["150g lean ground beef", "1 cup jasmine rice (cooked)", "1/2 avocado", "Salsa", "Cilantro"],
-    instructions: ["Brown the beef with salt and pepper.", "Serve over warm rice.", "Top with avocado slices and salsa."],
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: 'sean-4',
-    title: "Sean's Pre-Workout Berry Blast",
-    description: "Light on the stomach but high in fast-acting carbs for immediate energy.",
-    prepTime: "5 min",
-    servings: "1",
-    calories: 250,
-    goal: "gain",
-    ingredients: ["1 cup frozen mixed berries", "1/2 cup greek yogurt", "1 tbsp honey", "1 cup almond milk", "Ice"],
-    instructions: ["Blend all ingredients until smooth.", "Drink 30-60 minutes before training."],
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: 'sean-5',
-    title: "Sean's Late Night Protein Pudding",
-    description: "Curbs cravings while fueling muscle repair overnight.",
-    prepTime: "5 min",
-    servings: "1",
-    calories: 200,
+    servings: "2",
+    calories: 720,
     goal: "muscle",
-    ingredients: ["1 cup Greek yogurt (0% fat)", "1/2 scoop casein protein (chocolate)", "1 tsp dark cocoa powder", "Stevia to taste"],
-    instructions: ["Mix yogurt and protein powder in a bowl.", "Stir vigorously until consistency is like pudding.", "Chill for 10 minutes before eating."],
+    ingredients: [
+      "600g soft tofu (1 pack), cut into bite-size pieces",
+      "200g minced meat",
+      "150ml chicken stock",
+      "50ml chilli oil",
+      "2 tbsp spicy bean sauce",
+      "1 tsp cornstarch mixed with 55ml water",
+      "1 spring onion, chopped",
+      "1 clove garlic, minced",
+      "2cm ginger, minced",
+      "1/2 tsp Chinese five spice",
+      "1/2 tsp sesame oil",
+      "1 tsp caster sugar",
+      "1 tsp ground chilli peppers (optional)"
+    ],
+    instructions: [
+      "Prep: Cut tofu into cubes. Chop spring onions, garlic, and ginger. Mix cornstarch with water.",
+      "Sauté Aromatics: Heat oil in a pan on high heat. Add garlic and ginger, stir for 1 minute.",
+      "Cook Meat: Add minced meat, breaking it up. Cook until golden brown (5-6 mins).",
+      "Season: Add Chinese five spice and spicy bean sauce. Mix until meat is evenly coated.",
+      "Simmer: Pour in chicken stock and stir for 2-3 minutes.",
+      "Thicken & Combine: Reduce to medium heat. Stir in cornstarch mixture. Add tofu and chilli oil.",
+      "Finish: Gently mix without breaking tofu. Stir in sugar and spring onions.",
+      "Serve: Drizzle with sesame oil and serve over hot rice."
+    ],
     createdAt: new Date().toISOString()
   }
 ];
