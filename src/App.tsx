@@ -208,171 +208,165 @@ const CalculatorView = () => {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto p-4 space-y-8 animate-fade-in pb-24">
+    <div className="max-w-3xl mx-auto p-4 space-y-8 animate-fade-in pb-24">
       <div className="text-center space-y-2">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Nutrition Calculator</h2>
         <p className="text-gray-500 dark:text-gray-400">Calculate your optimal macro-nutrients based on your student lifestyle.</p>
       </div>
 
-      <div className="grid gap-6">
-        {/* Personal Details Box */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
-          <div className="flex items-center gap-3 mb-6 border-b dark:border-gray-700 pb-3">
-            <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-              <Users size={20} className="text-blue-600 dark:text-blue-400" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white">Personal Details</h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Age (years)</label>
+      {/* Unified Calculator Card */}
+      <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700 p-8">
+        
+        {/* Row 1: Basic Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Age</label>
+            <div className="relative">
               <input 
                 name="age" 
                 type="number" 
                 value={formData.age} 
                 onChange={handleInput} 
-                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none transition"
+                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 outline-none transition font-medium"
               />
+              <span className="absolute right-4 top-4 text-gray-400 text-sm">years</span>
             </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Gender</label>
-              <select 
-                name="gender" 
-                value={formData.gender} 
-                onChange={handleInput}
-                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none transition"
-              >
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Gender</label>
+            <select 
+              name="gender" 
+              value={formData.gender} 
+              onChange={handleInput}
+              className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 outline-none transition font-medium appearance-none"
+            >
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Weight (kg)</label>
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Weight</label>
+             <div className="relative">
               <input 
                 name="weight" 
                 type="number" 
                 value={formData.weight} 
                 onChange={handleInput}
-                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none transition"
+                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 outline-none transition font-medium"
               />
+              <span className="absolute right-4 top-4 text-gray-400 text-sm">kg</span>
             </div>
+          </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Height (cm)</label>
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Height</label>
+             <div className="relative">
               <input 
                 name="height" 
                 type="number" 
                 value={formData.height} 
                 onChange={handleInput}
-                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none transition"
+                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 outline-none transition font-medium"
               />
+              <span className="absolute right-4 top-4 text-gray-400 text-sm">cm</span>
             </div>
           </div>
         </div>
 
-        {/* Activity & Goals Box */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
-           <div className="flex items-center gap-3 mb-6 border-b dark:border-gray-700 pb-3">
-            <div className="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-lg">
-              <Activity size={20} className="text-purple-600 dark:text-purple-400" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white">Activity & Goals</h3>
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Activity Level</label>
+            <select 
+              name="activity" 
+              value={formData.activity} 
+              onChange={handleInput}
+              className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 outline-none transition font-medium"
+            >
+              <option value="1.2">Sedentary (Little or no exercise)</option>
+              <option value="1.375">Light (Exercise 1-3 days/week)</option>
+              <option value="1.55">Moderate (Exercise 3-5 days/week)</option>
+              <option value="1.725">Active (Exercise 6-7 days/week)</option>
+              <option value="1.9">Very Active (Hard exercise & physical job)</option>
+            </select>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Activity Level</label>
-              <select 
-                name="activity" 
-                value={formData.activity} 
-                onChange={handleInput}
-                className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none transition"
-              >
-                <option value="1.2">Sedentary (Little or no exercise)</option>
-                <option value="1.375">Light (Exercise 1-3 days/week)</option>
-                <option value="1.55">Moderate (Exercise 3-5 days/week)</option>
-                <option value="1.725">Active (Exercise 6-7 days/week)</option>
-                <option value="1.9">Very Active (Hard exercise & physical job)</option>
-              </select>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 block">Goal</label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {GOAL_OPTIONS.map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => setFormData(prev => ({ ...prev, goal: option.value }))}
-                    className={`py-3 px-2 rounded-xl text-sm font-semibold transition border ${
-                      formData.goal === option.value
-                        ? 'bg-green-600 text-white border-green-600 shadow-md'
-                        : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800'
-                    }`}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
+          <div className="space-y-3">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Goal</label>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {GOAL_OPTIONS.map((option) => (
+                <button
+                  key={option.value}
+                  onClick={() => setFormData(prev => ({ ...prev, goal: option.value }))}
+                  className={`py-4 px-2 rounded-xl text-sm font-bold transition border-2 ${
+                    formData.goal === option.value
+                      ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-500'
+                      : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-800 hover:border-green-200 dark:hover:border-green-900'
+                  }`}
+                >
+                  {option.label}
+                </button>
+              ))}
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t dark:border-gray-700">
+          <button 
+            onClick={calculate}
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-500/30 transition transform active:scale-[0.98] text-lg flex items-center justify-center gap-2"
+          >
+            <Calculator size={24} />
+            Calculate Plan
+          </button>
         </div>
       </div>
-
-      <button 
-        onClick={calculate}
-        className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-500/20 transition transform active:scale-95"
-      >
-        Calculate My Plan
-      </button>
 
       {stats && (
         <div className="space-y-6 animate-slide-up">
           {/* Results Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              {/* Calories Card */}
-             <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center text-center">
-                <span className="text-gray-500 dark:text-gray-400 font-medium mb-2">Daily Calories</span>
-                <span className="text-4xl font-extrabold text-gray-800 dark:text-white">{stats.calories}</span>
-                <span className="text-sm text-green-600 font-medium mt-1">kcal/day</span>
+             <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center text-center">
+                <span className="text-gray-500 dark:text-gray-400 font-medium mb-2 uppercase tracking-wide text-xs">Daily Target</span>
+                <span className="text-5xl font-black text-gray-900 dark:text-white tracking-tight">{stats.calories}</span>
+                <span className="text-green-600 font-bold mt-1">kcal</span>
              </div>
 
              {/* Protein Card - Emphasized */}
-             <div className="bg-green-600 p-6 rounded-2xl shadow-lg shadow-green-500/20 flex flex-col items-center justify-center text-center text-white transform hover:scale-[1.02] transition-transform">
-                <div className="flex items-center gap-2 mb-2 opacity-90">
-                  <Dumbbell size={18} />
-                  <span className="font-medium">Protein Goal</span>
+             <div className="bg-green-600 p-8 rounded-3xl shadow-xl shadow-green-500/20 flex flex-col items-center justify-center text-center text-white relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-4 -translate-y-4">
+                  <Dumbbell size={120} />
                 </div>
-                <span className="text-5xl font-extrabold">{stats.protein}g</span>
-                <span className="text-sm opacity-90 mt-1">Minimum daily intake</span>
+                <div className="flex items-center gap-2 mb-2 opacity-90 relative z-10">
+                  <Dumbbell size={18} />
+                  <span className="font-bold uppercase tracking-wide text-xs">Protein Goal</span>
+                </div>
+                <span className="text-5xl font-black relative z-10">{stats.protein}g</span>
+                <span className="text-sm opacity-90 mt-1 relative z-10">Minimum daily intake</span>
              </div>
           </div>
 
           {/* Math Reasoning */}
-          <div className="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-2xl border border-blue-100 dark:border-blue-900/30">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
             <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-4 flex items-center gap-2">
-              <Info size={18} />
-              The Math Behind Your Results
+              <Info size={18} className="text-blue-500" />
+              The Science
             </h3>
-            <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-              <p>
-                <strong className="text-blue-700 dark:text-blue-400">1. BMR ({stats.bmr}):</strong> 
-                This is your Basal Metabolic Rate—the energy your body burns just to exist (breathing, thinking) at rest.
-              </p>
-              <p>
-                <strong className="text-blue-700 dark:text-blue-400">2. TDEE ({stats.tdee}):</strong> 
-                We multiplied your BMR by your activity factor to estimate your Total Daily Energy Expenditure.
-              </p>
-              <p>
-                <strong className="text-blue-700 dark:text-blue-400">3. Your Goal Adjustment ({stats.adjustment > 0 ? '+' : ''}{stats.adjustment}):</strong> 
-                To {formData.goal.replace('-', ' ')}, we {stats.adjustment > 0 ? 'added' : 'subtracted'} calories from your TDEE.
-              </p>
-              <p>
-                <strong className="text-blue-700 dark:text-blue-400">4. Protein Need:</strong> 
-                Calculated at {stats.proteinMultiplier}g per kg of bodyweight to support your goal.
-              </p>
+            <div className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+              <div className="flex gap-3">
+                <span className="font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-0.5 rounded text-xs h-fit whitespace-nowrap">Step 1</span>
+                <p>Calculated BMR (<strong>{stats.bmr}</strong>) using Mifflin-St Jeor equation.</p>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-0.5 rounded text-xs h-fit whitespace-nowrap">Step 2</span>
+                <p>Multiplied by activity level ({formData.activity}) to get TDEE (<strong>{stats.tdee}</strong>).</p>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-0.5 rounded text-xs h-fit whitespace-nowrap">Step 3</span>
+                <p>Applied goal adjustment (<strong>{stats.adjustment > 0 ? '+' : ''}{stats.adjustment}</strong> kcal) for {formData.goal}.</p>
+              </div>
             </div>
           </div>
         </div>
