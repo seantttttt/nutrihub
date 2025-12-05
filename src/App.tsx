@@ -65,6 +65,30 @@ const SEANS_RECIPES: Recipe[] = [
       "Serve: Drizzle with sesame oil and serve over hot rice."
     ],
     createdAt: new Date().toISOString()
+  },
+  {
+    id: 'sean-kimchi-stew',
+    title: "Sean's Kimchi Stew",
+    description: "Recipe coming soon...",
+    prepTime: "--",
+    servings: "--",
+    calories: 0,
+    goal: "maintain",
+    ingredients: ["Coming soon"],
+    instructions: ["Recipe details will be added shortly."],
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 'sean-garlic-chicken',
+    title: "Sean's Garlic Chicken",
+    description: "Recipe coming soon...",
+    prepTime: "--",
+    servings: "--",
+    calories: 0,
+    goal: "lose",
+    ingredients: ["Coming soon"],
+    instructions: ["Recipe details will be added shortly."],
+    createdAt: new Date().toISOString()
   }
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Recipe } from '../types';
-import { X, Trash2, Clock, Users, Flame, Save, Ban } from 'lucide-react';
+import { X, Trash2, Clock, Users, Flame, Save, Ban, Youtube, ExternalLink } from 'lucide-react';
 
 interface RecipeDetailModalProps {
   recipe: Recipe | null;
@@ -53,6 +53,20 @@ const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             <p className="text-gray-600 dark:text-gray-300 italic">
               {recipe.description}
             </p>
+          )}
+
+          {/* YouTube/Video Link Button - MOVED TO TOP for easy access */}
+          {recipe.videoUrl && (
+            <a 
+              href={recipe.videoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold shadow-md transition transform active:scale-[0.98]"
+            >
+              <Youtube size={20} />
+              Watch Tutorial Video
+              <ExternalLink size={16} className="opacity-70" />
+            </a>
           )}
 
           {/* Stats Grid */}
