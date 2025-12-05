@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { 
   Calculator, 
@@ -39,6 +40,7 @@ const SEANS_RECIPES: Recipe[] = [
     servings: "2",
     calories: 720,
     goal: "muscle",
+    videoUrl: "https://youtube.com/shorts/ziWiWjZ-ETI?feature=share",
     ingredients: [
       "600g soft tofu (1 pack), cut into bite-size pieces",
       "200g minced meat",
