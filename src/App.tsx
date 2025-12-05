@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Calculator, 
@@ -17,7 +16,6 @@ import {
   Dumbbell,
   CheckCircle,
   Clock,
-  Users,
   Home,
   Laptop
 } from 'lucide-react';
@@ -582,6 +580,11 @@ const RecipesView = ({ recipes, onDelete }: { recipes: Recipe[], onDelete: (id: 
                     <div className="flex gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
                       <span className="flex items-center gap-1"><Flame size={12} /> {recipe.calories} kcal</span>
                       <span className="flex items-center gap-1"><Clock size={12} /> {recipe.prepTime}</span>
+                      {recipe.videoUrl && (
+                        <span className="flex items-center gap-1 text-red-600 dark:text-red-400 font-semibold bg-red-100 dark:bg-red-900/30 px-2 py-0.5 rounded-full">
+                          <Activity size={12} /> Video
+                        </span>
+                      )}
                     </div>
                  </div>
                  <ChevronRight className="text-gray-300 group-hover:text-yellow-500 transition" />

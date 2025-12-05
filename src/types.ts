@@ -8,6 +8,7 @@ export interface Recipe {
   goal: string;
   ingredients: string[];
   instructions: string[];
+  videoUrl?: string; // Added optional YouTube/Video link
   createdAt: string;
 }
 
