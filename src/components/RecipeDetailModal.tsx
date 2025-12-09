@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Recipe } from '../types';
-import { X, Trash2, Clock, Users, Flame, Save, Ban, Youtube, ExternalLink } from 'lucide-react';
+import { X, Trash2, Clock, Users, Flame, Save, Ban, Youtube, ExternalLink, Search } from 'lucide-react';
 
 interface RecipeDetailModalProps {
   recipe: Recipe | null;
@@ -21,6 +21,15 @@ const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
 
   // Check if it's a "Sean's Recipe" (starts with sean-)
   const isPinned = recipe.id.startsWith('sean-');
+
+  // Helper to generate YouTube search URL for AI chef recipes
+  const getChefSearchUrl = () => {
+    if (!recipe.chefName) return null;
+    const query = `${recipe.chefName} ${recipe.title} recipe`;
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+  };
+
+  const chefSearchUrl = getChefSearchUrl();
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
@@ -55,8 +64,15 @@ const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             </p>
           )}
 
-          {/* YouTube/Video Link Button - MOVED TO TOP for easy access */}
-          {recipe.videoUrl && (
+          {/* AI Chef attribution */}
+          {recipe.chefName && (
+            <div className="bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+              <span className="font-bold">Style:</span> Inspired by {recipe.chefName}
+            </div>
+          )}
+
+          {/* YouTube/Video Link Button - Priority 1: Direct Link. Priority 2: Chef Search */}
+          {recipe.videoUrl ? (
             <a 
               href={recipe.videoUrl} 
               target="_blank" 
@@ -67,7 +83,18 @@ const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
               Watch Tutorial Video
               <ExternalLink size={16} className="opacity-70" />
             </a>
-          )}
+          ) : chefSearchUrl ? (
+            <a 
+              href={chefSearchUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold shadow-md transition transform active:scale-[0.98]"
+            >
+              <Search size={20} />
+              Find {recipe.chefName}'s Video
+              <ExternalLink size={16} className="opacity-70" />
+            </a>
+          ) : null}
 
           {/* Stats Grid */}
           <div className="grid grid-cols-3 gap-4">

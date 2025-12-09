@@ -21,6 +21,10 @@ export const generateRecipe = async (
     - Cooking Time Preference: ${time}
     - Dietary Restrictions: ${dietaryRestrictions.join(', ') || 'None'}
 
+    **Style Instruction:**
+    Adopt the persona of a famous chef known for this type of cuisine (e.g., Gordon Ramsay for western, Maangchi for Korean, Kenji López-Alt for science-based, Jamie Oliver for simple). 
+    Write the description and instructions in their unique voice.
+
     The recipe should be realistic, tasty, and include estimated calories.
     Provide specific quantities in the ingredients.
   `;
@@ -38,6 +42,7 @@ export const generateRecipe = async (
           prepTime: { type: Type.STRING },
           servings: { type: Type.STRING },
           calories: { type: Type.NUMBER },
+          chefName: { type: Type.STRING, description: "The name of the famous chef whose style is being emulated" },
           ingredients: { 
             type: Type.ARRAY,
             items: { type: Type.STRING }
@@ -47,7 +52,7 @@ export const generateRecipe = async (
             items: { type: Type.STRING }
           },
         },
-        required: ["title", "description", "prepTime", "servings", "calories", "ingredients", "instructions"]
+        required: ["title", "description", "prepTime", "servings", "calories", "chefName", "ingredients", "instructions"]
       }
     }
   });
@@ -69,6 +74,7 @@ export const generateRecipe = async (
     goal: goal,
     ingredients: data.ingredients,
     instructions: data.instructions,
+    chefName: data.chefName,
     createdAt: new Date().toISOString()
   };
 };

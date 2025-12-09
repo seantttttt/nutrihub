@@ -8,7 +8,8 @@ export interface Recipe {
   goal: string;
   ingredients: string[];
   instructions: string[];
-  videoUrl?: string; // Added optional YouTube/Video link
+  videoUrl?: string; // Specific YouTube URL
+  chefName?: string; // Name of the chef style (for AI generation)
   createdAt: string;
 }
 

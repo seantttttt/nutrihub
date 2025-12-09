@@ -67,29 +67,124 @@ const SEANS_RECIPES: Recipe[] = [
     createdAt: new Date().toISOString()
   },
   {
-    id: 'sean-kimchi-stew',
-    title: "Sean's Kimchi Stew",
-    description: "A comforting, spicy, and savory Korean stew. Perfect for cold days.",
-    prepTime: "20 min",
-    servings: "2",
-    calories: 450,
-    goal: "maintain",
-    videoUrl: "https://youtube.com/shorts/CCF1vLz0V8o?feature=share",
-    ingredients: ["Full ingredients list coming soon..."],
-    instructions: ["Watch the tutorial video above for cooking instructions."],
-    createdAt: new Date().toISOString()
-  },
-  {
     id: 'sean-garlic-chicken',
     title: "Sean's Garlic Chicken",
-    description: "Crispy, savory chicken packed with garlic flavor. High protein.",
+    description: "Crispy, savory chicken packed with garlic flavor. High protein and perfect for fat loss.",
     prepTime: "25 min",
     servings: "2",
     calories: 520,
     goal: "lose",
     videoUrl: "https://youtube.com/shorts/jIPkyRe1Xy4?feature=share",
-    ingredients: ["Full ingredients list coming soon..."],
-    instructions: ["Watch the tutorial video above for cooking instructions."],
+    ingredients: [
+      "250g Chicken Thighs or Breasts",
+      "5 cloves Garlic (minced)",
+      "2 Scallions (green onions)",
+      "3 tbsp Soy Sauce",
+      "1 tbsp Honey",
+      "1 tbsp Mirin",
+      "Black Pepper (to taste)",
+      "Neutral Oil (for cooking)",
+      "3 tbsp Unsalted Butter"
+    ],
+    instructions: [
+      "Prep Chicken: Cut chicken into bite-sized pieces.",
+      "Cook Chicken: Heat neutral oil in a pan over medium-high heat. Sear chicken until golden brown and cooked through.",
+      "Aromatics: Add minced garlic and sauté until fragrant (about 30 seconds), being careful not to burn it.",
+      "Sauce: Lower heat. Add soy sauce, honey, mirin, and black pepper. Stir to coat the chicken.",
+      "Finish: Add butter and let it melt into the sauce for a glossy finish. Toss in chopped scallions right before serving."
+    ],
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 'sean-chili-oil-wontons',
+    title: "Sean's Chili Oil Wontons",
+    description: "Juicy pork wontons coated in a spicy, vinegary chili oil sauce. Calorie dense and delicious.",
+    prepTime: "30 min",
+    servings: "2",
+    calories: 680,
+    goal: "gain",
+    ingredients: [
+      "Square Wonton Wrappers",
+      "260g Ground Pork (or ground chicken)",
+      "1/2 tsp Ginger powder",
+      "2 Scallions (green onions)",
+      "1 tbsp Soy Sauce (filling)",
+      "2 tsp Sesame Oil (filling)",
+      "2 tbsp Sake or Shaoxing Wine",
+      "1 tbsp Oyster sauce",
+      "1 1/2 tsp Sugar",
+      "1/8 tsp Chicken bullion powder",
+      "--- Sauce ---",
+      "30g Chili Oil (with chili sediment/crisp)",
+      "1 tbsp Chinese Black Vinegar (Chinkiang Vinegar)",
+      "1 clove Garlic (minced)",
+      "Sesame Seeds"
+    ],
+    instructions: [
+      "Make Filling: In a bowl, mix ground pork, ginger powder, scallions, soy sauce, sesame oil, cooking wine, oyster sauce, sugar, and chicken bouillon. Mix vigorously until sticky.",
+      "Fold Wontons: Place a tsp of filling in the center of a wrapper. Wet edges with water, fold into a triangle, then bring the two bottom corners together.",
+      "Boil: Bring a pot of water to a boil. Cook wontons for 3-4 minutes until they float.",
+      "Make Sauce: While boiling, mix chili oil, black vinegar, minced garlic, and sesame seeds in a bowl.",
+      "Combine: Drain wontons and toss them directly in the sauce bowl. Serve immediately."
+    ],
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 'sean-kimchi-stew',
+    title: "Sean's Kimchi Stew (Jjigae)",
+    description: "A comforting, spicy, and savory Korean stew. Deep flavors and perfect for maintenance.",
+    prepTime: "20 min",
+    servings: "2",
+    calories: 480,
+    goal: "maintain",
+    videoUrl: "https://youtube.com/shorts/CCF1vLz0V8o?feature=share",
+    ingredients: [
+      "200g Kimchi (aged/sour is best)",
+      "200g Pork Belly (sliced)",
+      "600g Firm or Medium Tofu",
+      "1 Whole Onion, sliced",
+      "4 Scallions (green onions)",
+      "2 tsp Gochugaru (Korean Chili Flakes)",
+      "1.5 tbsp Gochujang (Korean Chili Paste)",
+      "2 tsp Sugar",
+      "2 tsp Sesame Oil",
+      "Water or Rice water (for broth)"
+    ],
+    instructions: [
+      "Sauté: In a pot, heat sesame oil over medium heat. Add pork belly and kimchi. Stir-fry for 3-5 minutes until pork is cooked and kimchi softens.",
+      "Season: Add onion, gochugaru, gochujang, and sugar. Stir well.",
+      "Boil: Pour in water (just enough to cover ingredients). Bring to a boil.",
+      "Simmer: Add tofu slices. Reduce heat and simmer for 10-15 minutes.",
+      "Finish: Top with chopped scallions and serve hot with rice."
+    ],
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 'sean-japanese-meat-bowl',
+    title: "Sean's Japanese Meat Bowl",
+    description: "Quick savory pork bowl (Butadon style). High protein and carbs for muscle recovery.",
+    prepTime: "15 min",
+    servings: "1",
+    calories: 650,
+    goal: "muscle",
+    ingredients: [
+      "200g Thinly Sliced Pork Belly",
+      "1/2 Onion, sliced",
+      "2 Scallions (green onions)",
+      "1/4 Cucumber (garnish)",
+      "2 tbsp Soy Sauce",
+      "2 tbsp Mirin",
+      "1 tbsp Sugar",
+      "2 tsp Sesame Oil",
+      "Steamed Rice (for serving)"
+    ],
+    instructions: [
+      "Prep Sauce: Mix soy sauce, mirin, and sugar in a small bowl.",
+      "Cook Pork: Heat sesame oil in a pan. Add pork belly slices and cook until browned.",
+      "Add Veggies: Add sliced onions to the pan and cook until soft and translucent.",
+      "Glaze: Pour in the sauce mixture. Simmer for 1-2 minutes until the sauce thickens and coats the meat.",
+      "Serve: Serve over a bowl of steamed rice. Garnish with cucumber slices and green onions."
+    ],
     createdAt: new Date().toISOString()
   }
 ];
