@@ -87,11 +87,13 @@ const SEANS_RECIPES: Recipe[] = [
       "3 tbsp Unsalted Butter"
     ],
     instructions: [
-      "Prep Chicken: Cut chicken into bite-sized pieces.",
-      "Cook Chicken: Heat neutral oil in a pan over medium-high heat. Sear chicken until golden brown and cooked through.",
-      "Aromatics: Add minced garlic and sauté until fragrant (about 30 seconds), being careful not to burn it.",
-      "Sauce: Lower heat. Add soy sauce, honey, mirin, and black pepper. Stir to coat the chicken.",
-      "Finish: Add butter and let it melt into the sauce for a glossy finish. Toss in chopped scallions right before serving."
+      "Marinate: In a bowl, mix the chicken with salt and garlic powder. Mix well for one minute, then cover and let it sit for 20 minutes.",
+      "Prep Aromatics: While the chicken marinates, chop the garlic and pulse it in a blender to mince it finely. Cut the green onions, separating the white parts from the green parts.",
+      "Fry Chicken: Add cooking oil (vegetable oil) to a pan. Add the marinated chicken and stir-fry for about 4 to 6 minutes, or until the chicken is fully golden brown. Remove the chicken from the pan and set it aside.",
+      "Sauté Aromatics: In the same pan, add the minced garlic and the spring onions (use the whites here). Stir-fry for around one minute.",
+      "Make Sauce: Add soy sauce, butter, honey, and mirin to the pan.",
+      "Combine: Add the cooked chicken back into the pan and toss to coat everything thoroughly in the sauce.",
+      "Finish: Add the remaining green spring onions as a garnish and serve."
     ],
     createdAt: new Date().toISOString()
   },
@@ -103,6 +105,7 @@ const SEANS_RECIPES: Recipe[] = [
     servings: "2",
     calories: 680,
     goal: "gain",
+    videoUrl: "https://youtube.com/shorts/UOeXKzT-VAc?feature=share",
     ingredients: [
       "Square Wonton Wrappers",
       "260g Ground Pork (or ground chicken)",
@@ -121,11 +124,14 @@ const SEANS_RECIPES: Recipe[] = [
       "Sesame Seeds"
     ],
     instructions: [
-      "Make Filling: In a bowl, mix ground pork, ginger powder, scallions, soy sauce, sesame oil, cooking wine, oyster sauce, sugar, and chicken bouillon. Mix vigorously until sticky.",
-      "Fold Wontons: Place a tsp of filling in the center of a wrapper. Wet edges with water, fold into a triangle, then bring the two bottom corners together.",
-      "Boil: Bring a pot of water to a boil. Cook wontons for 3-4 minutes until they float.",
-      "Make Sauce: While boiling, mix chili oil, black vinegar, minced garlic, and sesame seeds in a bowl.",
-      "Combine: Drain wontons and toss them directly in the sauce bowl. Serve immediately."
+      "Prepare Scallions: Cut up two spring onions, separating the whites and the greens.",
+      "Make the Sauce: In a bowl, add garlic, one portion of the spring onions, sugar, vinegar, soy sauce, ground sesame seeds, sesame oil, and water. Mix for 30 seconds. (The transcript refers to this base as your \"chilli oil\").",
+      "Make the Filling: In a separate bowl, add the ground pork, the green spring onions, cooking wine, ginger powder, chicken stock, water, and oyster sauce. Mix thoroughly until the texture is sticky.",
+      "Prepare the Dish: Lightly spray and brush a heat-proof dish with sesame oil.",
+      "Layer: Place a first layer of dumpling wrappers into the dish. Spread the meat filling over the wrappers. Add a second layer of dumpling wrappers on top and fold in the sides.",
+      "Hydrate: Lather the top layer with water to ensure it does not burn or dry out.",
+      "Steam: Place the dish into a steamer and cook for 10 to 15 minutes.",
+      "Finish: Carefully remove the hot plate from the steamer. Pour over the sauce you made (or your desired chili oil) and enjoy."
     ],
     createdAt: new Date().toISOString()
   },
@@ -148,14 +154,16 @@ const SEANS_RECIPES: Recipe[] = [
       "1.5 tbsp Gochujang (Korean Chili Paste)",
       "2 tsp Sugar",
       "2 tsp Sesame Oil",
-      "Water or Rice water (for broth)"
+      "Miso stock",
+      "Water (for broth)"
     ],
     instructions: [
-      "Sauté: In a pot, heat sesame oil over medium heat. Add pork belly and kimchi. Stir-fry for 3-5 minutes until pork is cooked and kimchi softens.",
-      "Season: Add onion, gochugaru, gochujang, and sugar. Stir well.",
-      "Boil: Pour in water (just enough to cover ingredients). Bring to a boil.",
-      "Simmer: Add tofu slices. Reduce heat and simmer for 10-15 minutes.",
-      "Finish: Top with chopped scallions and serve hot with rice."
+      "Prep Ingredients: Open the tofu and cut it into small bite-sized pieces. Cut the spring onions into both long and short bits. Cut the ends off the onion, slice in half, and cut into big pieces.",
+      "Assemble the Pot: Measure out 200g of kimchi. Add the cut onions, spring onions, kimchi, salt, sugar, chili pepper flakes, gochujang paste, miso stock, and sesame oil into the pot.",
+      "Initial Simmer: Pour in 2 cups of hot water. Set the heat to medium-low and let it cook for 15 minutes.",
+      "Add Tofu: Open the lid and check that the gochujang paste has fully dissolved. Add the cut tofu and let it cook for another 5 to 10 minutes.",
+      "Add Meat & Noodles: Open the lid again and add the meat slices, making sure to unravel them so they cook evenly. (Optional: Add an extra cup of hot water and plain noodles at this stage).",
+      "Finish: Let the noodles and meat cook in the soup for 3 to 4 more minutes. Serve immediately."
     ],
     createdAt: new Date().toISOString()
   },
@@ -167,6 +175,7 @@ const SEANS_RECIPES: Recipe[] = [
     servings: "1",
     calories: 650,
     goal: "muscle",
+    videoUrl: "https://youtube.com/shorts/o9_p_nVnm8g?feature=share",
     ingredients: [
       "200g Thinly Sliced Pork Belly",
       "1/2 Onion, sliced",
@@ -179,11 +188,12 @@ const SEANS_RECIPES: Recipe[] = [
       "Steamed Rice (for serving)"
     ],
     instructions: [
-      "Prep Sauce: Mix soy sauce, mirin, and sugar in a small bowl.",
-      "Cook Pork: Heat sesame oil in a pan. Add pork belly slices and cook until browned.",
-      "Add Veggies: Add sliced onions to the pan and cook until soft and translucent.",
-      "Glaze: Pour in the sauce mixture. Simmer for 1-2 minutes until the sauce thickens and coats the meat.",
-      "Serve: Serve over a bowl of steamed rice. Garnish with cucumber slices and green onions."
+      "Prep Vegetables: Peel the skin off the cucumber and cut it into small pieces. Chop the onions and mince the garlic.",
+      "Make the Sauce: In a bowl, mix soy sauce, mirin, sugar, and water. Stir until the sugar is fully dissolved.",
+      "Fry Meat: Add sesame oil to a pan and set it to high heat. Add the meat slices and stir-fry for 4 to 6 minutes, or until golden brown.",
+      "Add Aromatics: Cut the meat into smaller pieces if needed. Add the chopped onions and minced garlic to the pan and stir for around 1 minute.",
+      "Glaze: Pour the prepared sauce into the pan. Mix well to evenly coat the meat and cook for another 1 to 2 minutes.",
+      "Assemble: Place the meat onto a bowl of hot rice. Arrange the prepared cucumber pieces around the meat as decoration and serve."
     ],
     createdAt: new Date().toISOString()
   }
